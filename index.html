@@ -51,10 +51,10 @@
     @media(min-width:768px){.hero-l{padding:64px;border-bottom:none;border-right:1px solid var(--line)}}
 
     /* 두꺼운 흰 프레임 카드 */
-    .hero-card{background:#fff;border:1px solid rgba(255,255,255,.75);box-shadow:0 18px 48px rgba(84,51,59,.08);width:100%;max-width:351px;padding:0;animation:float 7s ease-in-out infinite}
-    @media(min-width:768px){.hero-card{padding:32px 32px 0}}
+    .hero-card{background:#fff;border:1px solid rgba(255,255,255,.75);box-shadow:0 18px 48px rgba(84,51,59,.08);width:100%;padding:0;animation:float 7s ease-in-out infinite}
+    @media(min-width:768px){.hero-card{max-width:351px;padding:32px 32px 0}}
     @keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
-    .hero-card img{width:100%;height:300px;object-fit:cover;object-position:center top;display:block}
+    .hero-card img{width:100%;height:340px;object-fit:cover;object-position:center top;display:block}
     @media(min-width:768px){.hero-card img{height:420px}}
     .hero-cap{padding:14px 0 18px;text-align:center}
 
@@ -182,7 +182,8 @@
     @media(min-width:768px){.brd-in{padding:97px 64px}}
     .brd-ey{margin-bottom:12px}
     .brd-h2{font-size:clamp(1.625rem,4vw,2.25rem);font-weight:500;line-height:1.45;margin-bottom:40px}
-    .brd-img{width:100%;height:200px;object-fit:cover;margin-bottom:40px}
+    .brd-img-wrap{background:#fff;margin-bottom:40px}
+    .brd-img{width:100%;height:200px;object-fit:contain;display:block}
     @media(min-width:768px){.brd-img{height:299px}}
     .brd-p{font-size:.9375rem;color:var(--ts);line-height:1.75;margin-bottom:14px}
 
@@ -423,7 +424,9 @@
   <div class="brd-in">
     <p class="lbl brd-ey rv">Since 1982</p>
     <h2 class="brd-h2 rv d1">오랜 시간 비누를 연구해온<br>브랜드의 기준</h2>
-    <img class="brd-img rv d2" src="img-soap-bars.png" alt="로이렙스 연구소 및 생산시설">
+    <div class="brd-img-wrap rv d2">
+      <img class="brd-img" src="img-soap-bars.png" alt="로이렙스 연구소 및 생산시설">
+    </div>
     <div class="rv d3">
       <p class="brd-p">1982년 한방 원료와 광물성 원료를 응용한 비누 연구에서 출발해, 로이렙스는 수십 년간 더 좋은 비누를 만들기 위한 실험과 축적을 이어왔습니다.</p>
       <p class="brd-p">빠르게 소비되는 유행보다, 매일 써도 만족스러운 사용감과 신뢰할 수 있는 원료를 더 중요하게 생각합니다. 그래서 ROI의 비누는 화려한 과장보다 조용한 완성도를 선택합니다.</p>
@@ -492,7 +495,7 @@
       </button>
       <div class="faq-body"><p class="faq-a">욕실, 화장대, 서랍 등 작은 공간에 두면 은은한 로즈 무드를 더하는 데 도움이 됩니다.</p></div>
     </div>
-    <div class="faq-item rv d4">
+    <div class="faq-item open rv d4">
       <button class="faq-btn" onclick="toggleFaq(this)">
         <span class="faq-q">선물용으로도 괜찮나요?</span>
         <span class="faq-ico"><svg viewBox="0 0 12 7" fill="none"><path d="M1 1L6 6L11 1" stroke="#8F4A5B" stroke-width="1.67" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
